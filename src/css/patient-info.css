@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+:root {
+    --bg-color: #f1f9ff;
+    --btn-bg-color: #095d7e;
+    --btn-hover: #0065c0;
+    --secondary-size: 1.20rem;
+    /* 20px */
+    --primary-size: 1rem;
+    /* 16px */
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==== LEFT AND TOP ITEMS ==== */
+.sh-left-and-top-items-section {
+    width: 100%;
+    display: flex;
+}
+
+/* === JUST ICONS === */
+.sh-left-side-menu-container-icon {
+    width: 60px;
+    height: 100vh;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    background: var(--bg-color);
+    display: none;
+    left: 0;
+    top: 0;
+    position: sticky;
+}
+
+.sh-brand-logo-icons {
+    z-index: 999;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    top: 0;
+    position: sticky;
+    border-inline-end: 1px solid #70809063;
+}
+
+.sh-brand-logo-icons a {
+    color: var(--btn-bg-color);
+}
+
+.sh-left-side-menu-items-icons ul {
+    width: 100%;
+}
+
+.sh-left-side-menu-items-icons li {
+    height: 50px;
+}
+
+.sh-left-side-menu-items-icons a {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--primary-size);
+    color: #708090;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sh-left-side-menu-items-icons a:hover {
+    background: var(--btn-bg-color);
+    color: white;
+}
+
+/* ================================ */
+/* === LEFT SIDE MENU ITEMS === */
+.sh-left-side-menu-container {
+    left: 0;
+    top: 0;
+    position: sticky;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+}
+
+/* === BRAND LOGO === */
+.sh-brand-logo a {
+    height: 80px;
+    z-index: 999;
+    color: var(--btn-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    border-inline-end: 1px solid #70809063;
+}
+
+/* === MENU ITEMS === */
+.sh-left-side-menu-items ul {
+    width: 100%;
+}
+
+.sh-left-side-menu-items li {
+    height: 50px;
+}
+
+.sh-left-side-menu-items a {
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+    transition: all 0.3s ease-in-out;
+    font-size: var(--primary-size);
+    color: #708090;
+    display: flex;
+    align-items: center;
+}
+
+.sh-left-side-menu-items a:hover {
+    background-color: var(--btn-hover);
+    color: white;
+}
+
+.sh-left-side-menu-items i {
+    margin-right: 5px;
+}
+
+/* === RIGHT ITEM DETAILS SECTION === */
+.sh-right-item-details-section {
+    width: 100%;
+}
+
+/* === TOP NAV ITEMS === */
+.sh-doctor-nav-section {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    background: white;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* === DOCTOR NAV LEFT CONTAINER === */
+.sh-doctor-nav-left-container ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sh-menu-hover {
+    color: black;
+}
+
+.show-short-menu {
+    display: none;
+}
+
+.appointment-btn a {
+    transition: all 0.3s ease-in-out;
+    background: var(--bg-color);
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: var(--primary-size);
+    color: black;
+}
+
+.appointment-btn a:hover {
+    background: var(--btn-hover);
+    color: white;
+}
+
+/* === DOCTOR NAV RIGHT CONTAINER === */
+.sh-doctor-nav-right-container {
+    display: flex;
+    align-items: center;
+}
+
+/* === NOTIFICATION ICON */
+.sh-notificatio-icon {
+    position: relative;
+    margin-right: 30px;
+    color: #B22222;
+    font-size: var(--secondary-size);
+}
+
+.sh-notificatio-icon i::after {
+    position: absolute;
+    content: "10";
+    text-align: center;
+    font-size: 9px;
+    padding: 3px;
+    border-radius: 50%;
+    color: white;
+    background-color: #ff000093;
+    margin-top: -10px;
+    margin-left: -4px;
+
+}
+
+/* === DOCTOR PROFILE === */
+.sh-doctor-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sh-doctor-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sh-doctor-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #708090;
+}
+
+/* ==== PATIENT INFO AND PAYMENT METHODS ==== */
+.sh-patient-info-payment-methods-section {
+    width: 100%;
+    display: flex;
+}
+
+/* === PATIENTS INFORMATION === */
+.sh-patient-information-section {
+    margin: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border-block-start: 1px solid #7080907a;
+    border-inline-end: 1px solid #7080907a;
+    border-inline-start: 1px solid #7080907a;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+}
+
+.patient-info-text {
+    height: 50px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    color: #708090;
+    border-block-end: 1px solid #7080907a;
+}
+
+.sh-patient-information-container {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sh-info-box {
+    width: 100%;
+    line-height: 2em;
+}
+
+.sh-patient-information-container input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 3px 6px;
+    font-size: 0.875rem;
+    border: 1px solid #708090;
+}
+
+.sh-patient-information-container input:focus {
+    outline: none;
+}
+
+.sh-patient-information-container select:focus {
+    outline: none;
+}
+
+.sh-patient-information-container select {
+    width: 100%;
+    font-size: 0.875rem;
+    border-radius: 3px;
+    padding: 3px 6px;
+    appearance: none;
+    border: 1px solid #708090;
+}
+
+/* === PAYMENT METHODS === */
+.sh-payment-contact-section {
+    width: 40%;
+    margin: 20px;
+}
+.sh-messenger-bg{
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    background: #0099FF;
+    border-block-end: 2px solid white;
+}
+.sh-live-contact{
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+    background-color: #079992;
+}
+.sh-whatsapp-bg{
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    background: #25D366;
+}
+.sh-payment-methods-section {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #7080907a;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.sh-payment-container {
+    background: white;
+    padding: 10px;
+    line-height: 3em;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.2);
+}
+
+.sh-payment-container button {
+    width: 100%;
+}
+
+.sh-payment-btn-style img {
+    width: 100%;
+    height: 50px;
+}
+
+.sh-payment-btn-style {
+    border: 1px solid #708090;
+    font-size: 1.5rem;
+    border-radius: 3px;
+}
+
+.sh-payment-btn-bg-cash {
+    transition: all 0.3s ease-in-out;
+    background: #2F4F4F;
+    color: #E2E8F0;
+}
+
+.sh-payment-btn-bg-cash:hover {
+    background: #37aeae;
+}
+
+.sh-payment-btn-bg-bkash {
+    background: white;
+    padding: 3px 5px;
+}
+
+.sh-nagad-bksh {
+    display: flex;
+    gap: 10px;
+}
+
+/* === SUBMIT BUTTON === */
+.sh-submit-btn {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.sh-submit-btn button {
+    transition: all 0.3s ease-in-out;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    background: var(--btn-bg-color);
+    color: #E2E8F0;
+    border: 1px solid #708090;
+    border-radius: 5px;
+}
+
+.sh-submit-btn button:hover {
+    background: var(--btn-hover);
+}
+
+.sh-footer-section {
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 3px 3px 3px 5px rgb(0, 0, 0, 0.1);
+}
+
+/* === PDF FILE === */
+.sh-pdf-section {
+    width: 100%;
+    justify-items: center;
+}
+
+.sh-pdf-details {
+    width: 70%;
+    justify-items: center;
+    border: 1px solid #7080907a;
+}
+
+.sh-pdf-doc-container {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-block-end: 1px solid #7080907a;
+}
+
+.sh-pdf-patient-info {
+    width: 100%;
+    padding: 20px;
+}
+
+.sh-pdf-patient-info-box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: #f2f3f4;
+    border-block-end: 1px solid #7080907a;
+}
+
+.sh-pdf {
+    width: 100%;
+    text-align-last: left;
+}
+
+.sh-pdf-download {
+    width: 70%;
+    margin-top: 20px;
+    text-align: end;
+}
+
+.sh-pdf-download i {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 5px;
+    background: var(--btn-bg-color);
+}
+
+/* === MOBILE RESPONSIVE === */
+@media(max-width: 768px) {
+
+    .sh-left-side-menu-container-icon,
+    .sh-left-side-menu-container {
+        display: none;
+    }
+
+    .sh-patient-info-payment-methods-section {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sh-payment-contact-section{
+        width: 100%;
+        margin: 0;
+    }
+    .sh-payment-methods-section {
+        width: 100%;
+    }
+
+    .sh-doctor-nav-section {
+        padding: 10px;
+    }
+
+    .sh-right-item-details-section {
+        width: 100%;
+    }
+
+    .sh-patient-information-container {
+        padding: 10px;
+    }
+
+    .sh-patient-information-section,
+    .sh-payment-methods-section {
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .sh-submit-btn {
+        width: 100%;
+    }
+
+    .sh-menu-hover,
+    .show-short-menu {
+        display: none;
+    }
+}
+
+/* ==================== */
+.sh-mobile-navbar {
+    display: none;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media(max-width: 768px) {
+    .sh-left-and-top-items-section {
+        margin-bottom: 70px;
+    }
+
+    .sh-mobile-navbar {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .sh-mobile-navbar ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sh-mobile-navbar li {
+        height: 50px;
+        width: 100%;
+        background: var(--bg-color);
+    }
+
+    .sh-mobile-navbar a {
+        height: 100%;
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        color: var(--btn-bg-color);
+    }
+
+    .sh-pdf-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sh-pdf-details {
+        width: 100%;
+    }
+
+    .sh-pdf-patient-info-box {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        border-block-end: none;
+        gap: 20px;
+    }
+
+    .sh-pdf-patient-info {
+        padding: 0;
+    }
+
+    .sh-pdf {
+        display: flex;
+        border-block-end: 1px solid #7080907a;
+    }
+
+    .sh-pdf label {
+        width: 100%;
+    }
+
+    .sh-pdf p {
+        width: 100%;
+    }
+
+    .sh-pdf-download {
+        width: 100%;
+        padding: 10px;
+    }
+}
