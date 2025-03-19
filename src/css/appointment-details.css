@@ -101,8 +101,7 @@ a {
     align-items: center;
     justify-content: center;
     background: white;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
-    border-inline-end: 1px solid #70809063;
+   
 }
 
 /* === MENU ITEMS === */
@@ -363,7 +362,7 @@ td {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     box-shadow: 3px 3px 3px 5px rgb(0, 0, 0, 0.1);
 }

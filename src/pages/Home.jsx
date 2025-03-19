@@ -1,4 +1,4 @@
-import { faBangladeshiTakaSign, faBell, faCheck, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faUserDoctor, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBangladeshiTakaSign, faBarsStaggered, faBell, faCheck, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faTrash, faUserDoctor, faUsers, faXmark } from '@fortawesome/free-solid-svg-icons'
 import '../css/home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink,  Link } from 'react-router-dom'
@@ -6,16 +6,16 @@ const Home = () => {
   return (
     <div>
       {/* mobile responsive */}
-      {<div class="sh-mobile-navbar">
+      <div class="sh-mobile-navbar">
         <ul>
-            <li><a href="index.html"><FontAwesomeIcon icon={faHome}/></a></li>
-            <li><a href="patient-info.html"> <FontAwesomeIcon icon={faHospitalUser}/></a></li>
-            <li><a href="appointment-details.html"><FontAwesomeIcon icon={faNotesMedical}/></a></li>
-            <li><a href="doctor-time-manage.html"><FontAwesomeIcon icon={faClock}/></a></li>
-            <li><a href="doctor-profile.html"><FontAwesomeIcon icon={faUserDoctor}/></a></li>
-            <li><a href="change-doctor.html"><FontAwesomeIcon icon={faSearch}/></a></li>
+            <li><NavLink to='/'><FontAwesomeIcon icon={faHome}/></NavLink></li>
+            <li><NavLink to="/patientInfo"> <FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
+            <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
+            <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/></NavLink></li>
+            <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/></NavLink></li>
+            <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/></NavLink></li>
         </ul>
-    </div>}
+        </div>
       <div class="sh-left-and-top-items-section">
        {/*  <!-- === LEFT SIDE MENU ITEMS ICONS === --> */}
         <div class="sh-left-side-menu-container-icon">
@@ -25,12 +25,12 @@ const Home = () => {
 
             <div class="sh-left-side-menu-items-icons">
                 <ul>
-                    <li><Link to='/'><FontAwesomeIcon icon={faHome}/></Link></li>
+                    <li><NavLink to='/'><FontAwesomeIcon icon={faHome}/></NavLink></li>
                     <li><NavLink to="/patientInfo"><FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
                     <li><NavLink href="appointment-details.html"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
-                    <li><a href="doctor-time-manage.html"><FontAwesomeIcon icon={faClock}/></a></li>
-                    <li><a href="doctor-profile.html"><FontAwesomeIcon icon={faUserDoctor}/></a></li>
-                    <li><a href="change-doctor.html"><i class="fa-solid fa-search"></i></a></li>
+                    <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/></NavLink></li>
+                    <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/></NavLink></li>
+                    <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/></NavLink></li>
                 </ul>
             </div>
         </div>
@@ -43,13 +43,13 @@ const Home = () => {
             <div class="sh-left-side-menu-items">
                 <ul>
                     <li>
-                        <NavLink to="/">
-                            <FontAwesomeIcon icon={faHome}/>
-                            <p>হোম</p>
+                        <NavLink to="/" style={({ isActive }) => ({color: isActive ? "white" : "black",  backgroundColor: isActive ? "#0065c0" : "transparent", })}>
+                        <FontAwesomeIcon icon={faHome}/>
+                        <p>হোম</p>
                         </NavLink>
                     </li>
                     <li>
-                    <NavLink href="/patientInfo">
+                    <NavLink to='/patient-info'>
                     <FontAwesomeIcon icon={faHospitalUser}/> রোগীর
                             তথ্য</NavLink>
                     </li>
@@ -58,36 +58,36 @@ const Home = () => {
                             বিবরণ</NavLink></li>
                     <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/>ডাক্তারের সময়সূচী</NavLink></li>
                     <li><NavLink  to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/>ডাক্তারের প্রোফাইল</NavLink></li>
-                    <li><NavLink to="change-doctor"><FontAwesomeIcon icon={faSearch}/>ডাক্তার পরিবর্তন</NavLink></li>
+                    <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/>ডাক্তার পরিবর্তন</NavLink></li>
                 </ul>
             </div>
         </div>
         {/* <!-- === RIGHT ITEM DETAILS SECTION === --> */}
         <div class="sh-right-item-details-section">
            {/*  <!-- === TOP NAV ITEMS === --> */}
-            <div class="sh-doctor-nav-section">
-                <div class="sh-doctor-nav-left-container">
-                    <ul>
-                        <li onclick="hidemenu()" class="sh-menu-hover"><i class="fa-solid fa-bars-staggered"></i></li>
-                        <li onclick="showSidemenu()" class="show-short-menu"><i class="fa-solid fa-arrow-right"></i>
-                        </li>
-                        <li class="appointment-btn"><a href="patient-info.html">সাক্ষাৎকার</a></li>
-                    </ul>
-                </div>
-                <div class="sh-doctor-nav-right-container">
-                    {/* <!-- === NOTIFICATION ICON === --> */}
-                    <div class="sh-notificatio-icon"><FontAwesomeIcon icon={faBell}/></div>
-                    <div class="sh-doctor-profile">
-                        <div class="sh-doctor-name">
-                            <h4>Dr.Abir Hossain</h4>
-                            <p>Admin</p>
-                        </div>
-                        <div class="sh-doctor-image">
-                            <img src="img/doctor_2785482.png" alt="DOC"/>
+                <div class="sh-doctor-nav-section">
+                    <div class="sh-doctor-nav-left-container">
+                        <ul>
+                            <li onclick="hidemenu()" class="sh-menu-hover"><FontAwesomeIcon icon={faBarsStaggered}/></li>
+                            <li onclick="showSidemenu()" class="show-short-menu"><FontAwesomeIcon icon={faArrowRight}/>
+                            </li>
+                            <li class="appointment-btn"><NavLink to="/change-doctor">সাক্ষাৎকার</NavLink></li>
+                        </ul>
+                    </div>
+                    <div class="sh-doctor-nav-right-container">
+                        
+                        <div class="sh-notificatio-icon"><FontAwesomeIcon icon={faBell}/></div>
+                        <div class="sh-doctor-profile">
+                            <div class="sh-doctor-name">
+                                <h4>Dr.Abir Hossain</h4>
+                                <p>Admin</p>
+                            </div>
+                            <div class="sh-doctor-image">
+                                <img src="img/doctor_2785482.png" alt="DOC"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             {/* <!-- === FILLTER === --> */}
             <div class="sh-fillter">
                 <input type="text" placeholder="তারিখ বা সময় " name="" id=""/>
@@ -137,30 +137,11 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
                                 <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী </td>
-                            <td class="sh-text-center">৭০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                         <tr>
@@ -170,31 +151,25 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
-                        <tr>
+                       <tr>
                             <td>মোঃ আবির হোসেন</td>
                             <td>মডার্ণ মোড় রংপুর।</td>
                             <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী </td>
-                            <td class="sh-text-center">৭০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                         <tr>
@@ -204,31 +179,11 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী </td>
-                            <td class="sh-text-center">৭০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                         <tr>
@@ -238,31 +193,11 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী </td>
-                            <td class="sh-text-center">৭০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                         <tr>
@@ -272,14 +207,11 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                         <tr>
@@ -288,15 +220,54 @@ const Home = () => {
                             <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী </td>
-                            <td class="sh-text-center">৭০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><i
-                                        class="fa-solid fa-check"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-xmark"></i></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><i
-                                        class="fa-solid fa-trash"></i></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
+                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
                     </tbody>
@@ -333,7 +304,7 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
                                 <p>পরিদর্শিত হয়েছে </p>
                             </td>
@@ -344,32 +315,8 @@ const Home = () => {
                             <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী</td>
-                            <td class="sh-text-center">৭০০<i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়নি </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <p>বাতিল হয়েছে</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
                                 <p>পরিদর্শিত হয়েছে </p>
                             </td>
@@ -380,32 +327,8 @@ const Home = () => {
                             <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী</td>
-                            <td class="sh-text-center">৭০০<i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়নি </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
-                            <td class="sh-action-btns">
-                                <p>বাতিল হয়েছে</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
                                 <p>পরিদর্শিত হয়েছে </p>
                             </td>
@@ -416,10 +339,10 @@ const Home = () => {
                             <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">পুরাতন রোগী</td>
-                            <td class="sh-text-center">৭০০<i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়নি </p>
+                                <p>পরিদর্শিত হয়েছে </p>
                             </td>
                         </tr>
                         <tr>
@@ -429,9 +352,57 @@ const Home = () => {
                             <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
                             <td class="sh-text-center">০৩/১১/২০২৫</td>
                             <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <i class="fa-solid fa-bangladeshi-taka-sign"></i></td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
                             <td class="sh-action-btns">
-                                <p>বাতিল হয়েছে</p>
+                                <p>পরিদর্শিত হয়েছে </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <p>পরিদর্শিত হয়েছে </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <p>পরিদর্শিত হয়েছে </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <p>পরিদর্শিত হয়েছে </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>মোঃ আবির হোসেন</td>
+                            <td>মডার্ণ মোড় রংপুর।</td>
+                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
+                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
+                            <td class="sh-text-center">০৩/১১/২০২৫</td>
+                            <td class="sh-text-center">নতুন রোগী</td>
+                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
+                            <td class="sh-action-btns">
+                                <p>পরিদর্শিত হয়েছে </p>
                             </td>
                         </tr>
                     </tbody>

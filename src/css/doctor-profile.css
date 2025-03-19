@@ -102,8 +102,7 @@ a {
     align-items: center;
     justify-content: center;
     background: white;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
-    border-inline-end: 1px solid #70809063;
+    
 }
 
 /* === MENU ITEMS === */
