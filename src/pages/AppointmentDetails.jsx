@@ -10,8 +10,8 @@ const AppointmentDetails = () => {
                 <div class="sh-mobile-navbar">
                     <ul>
                         <li><NavLink to='/'><FontAwesomeIcon icon={faHome}/></NavLink></li>
-                        <li><NavLink to="/patientInfo"> <FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
-                        <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
+                        <li><NavLink to="/patient-info"> <FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
+                        <li><NavLink to="/appointment-details"style={({ isActive }) => ({color: isActive ? "white" : "black",  backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
                         <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/></NavLink></li>
                         <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/></NavLink></li>
                         <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/></NavLink></li>
@@ -28,8 +28,8 @@ const AppointmentDetails = () => {
             <div class="sh-left-side-menu-items-icons">
                 <ul>
                     <li><NavLink to='/'><FontAwesomeIcon icon={faHome}/></NavLink></li>
-                    <li><NavLink to="/patient-info"><FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
-                    <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
+                    <li><NavLink to="/patient-info" ><FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
+                    <li><NavLink to="/appointment-details" style={({ isActive }) => ({color: isActive ? "white" : "black",  backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
                     <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/></NavLink></li>
                     <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/></NavLink></li>
                     <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/></NavLink></li>

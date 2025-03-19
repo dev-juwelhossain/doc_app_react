@@ -566,6 +566,7 @@ td {
         align-items: center;
         justify-content: center;
         z-index: 9999;
+        margin-bottom: -4px ;
     }
 
     .sh-mobile-navbar ul {
@@ -587,5 +588,9 @@ td {
         display: flex;
         align-items: center;
         color: var(--btn-bg-color);
+    }
+    .sh-mobile-navbar ul li a:hover{
+        background-color: var(--btn-hover);
+        color: white;
     }
 }
