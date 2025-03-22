@@ -2,6 +2,18 @@ import { faArrowRight, faBangladeshiTakaSign, faBarsStaggered, faBell, faCheck, 
 import '../css/home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink,  Link } from 'react-router-dom'
+function hidemenu(){
+    document.querySelector('.sh-left-side-menu-container').style.display = 'none';
+    document.querySelector('.sh-menu-hover').style.display = 'none';
+    document.querySelector('.sh-left-side-menu-container-icon').style.display = 'block';
+    document.querySelector('.show-short-menu').style.display = 'block';
+}
+function showSidemenu(){
+    document.querySelector('.sh-left-side-menu-container').style.display = 'block';
+    document.querySelector('.sh-menu-hover').style.display = 'block';
+    document.querySelector('.sh-left-side-menu-container-icon').style.display = 'none';
+    document.querySelector('.show-short-menu').style.display = 'none';
+}
 const Home = () => {
   return (
     <div>
@@ -158,118 +170,8 @@ const Home = () => {
                                 <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </td>
                         </tr>
-                       <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <button type="button" name="button" class="sh-action-btn-style sh-check-btn"><FontAwesomeIcon icon={faCheck}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faXmark}/></button>
-                                <button type="button" name="button" class="sh-action-btn-style sh-delete-btn"><FontAwesomeIcon icon={faTrash}/></button>
-                            </td>
-                        </tr>
+                      
+                        
                     </tbody>
                 </table>
             </div>
@@ -333,78 +235,7 @@ const Home = () => {
                                 <p>পরিদর্শিত হয়েছে </p>
                             </td>
                         </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>মোঃ আবির হোসেন</td>
-                            <td>মডার্ণ মোড় রংপুর।</td>
-                            <td class="sh-text-center"> ০১৩১৫-২৯১২৯৩</td>
-                            <td class="sh-text-center">সন্ধ্যা ৭.০০ টা</td>
-                            <td class="sh-text-center">০৩/১১/২০২৫</td>
-                            <td class="sh-text-center">নতুন রোগী</td>
-                            <td class="sh-text-center">১,০০০ <FontAwesomeIcon icon={faBangladeshiTakaSign}/></td>
-                            <td class="sh-action-btns">
-                                <p>পরিদর্শিত হয়েছে </p>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

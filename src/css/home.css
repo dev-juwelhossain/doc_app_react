@@ -586,6 +586,7 @@ td {
         height: 100%;
         padding: 0px 20px;
         display: flex;
+        justify-content: center;
         align-items: center;
         color: var(--btn-bg-color);
     }

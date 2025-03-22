@@ -6,6 +6,7 @@ import ChangeDoctor from "../pages/ChangeDoctor";
 import DocTimeManage from "../pages/DocTimeManage";
 import DoctorProfile from "../pages/DoctorProfile";
 import PatientInfo from "../pages/PatientInfo";
+import Login from "../components/DocLogin";
 
 
 const MainRouter = createBrowserRouter([{
@@ -38,5 +39,10 @@ const MainRouter = createBrowserRouter([{
                 element:<PatientInfo/>
             },
         ]
-}]);
+    },
+    {
+        path:'/login',
+        element:<Login/>
+    }
+]);
 export default MainRouter;
