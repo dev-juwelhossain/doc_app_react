@@ -233,9 +233,10 @@ a {
 /* === PATIENTS SECTION === */
 .sh-patients-section {
     width: 100%;
-    height: 60vh;
-    padding: 20px;
-    overflow: scroll;
+   max-height: 61vh;
+   height: max-content;
+    padding: 20p x;
+    overflow:  hidden;
 }
 
 .sh-patients-section table {
@@ -266,6 +267,7 @@ td {
 .sh-new-patients h1 {
     font-size: 1.5rem;
     color: #708090;
+    border-block-end: 1px solid #708090;
 }
 
 
@@ -370,7 +372,7 @@ td {
         padding: 10px;
         width: 100%;
         height: 78vh;
-        overflow: scroll;
+        overflow: hidden;
     }
 
     .sh-patients-name {
