@@ -235,6 +235,7 @@ a {
     width: 100%;
     height: 60vh;
     padding: 20px;
+    overflow: scroll;
 }
 
 .sh-patients-section table {
@@ -247,6 +248,8 @@ td {
     border: 1px solid #70809063;
     padding: 10px 15px;
     color: #708090;
+    font-size: 13px ;
+   
 }
 
 .sh-new-patients {
@@ -257,7 +260,6 @@ td {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     margin-bottom: 20px;
 }
 
@@ -266,14 +268,7 @@ td {
     color: #708090;
 }
 
-.sh-new-patients h1::before {
-    position: absolute;
-    content: "";
-    background-color: #2F4F4F;
-    width: 150px;
-    height: 2px;
-    bottom: 0;
-}
+
 
 .sh-new-patients input {
     width: 25%;
@@ -284,7 +279,7 @@ td {
 }
 
 .sh-patients-name {
-    width: 25%;
+    width: 20%;
     text-align: left;
 }
 
@@ -303,7 +298,7 @@ td {
 
 /* === PAGINATION === */
 .sh-pagination {
-    margin-top: 100px;
+    margin-top: 10px;
     gap: 10px;
     display: flex;
     align-items: center;
@@ -357,15 +352,6 @@ td {
     font-weight: bolder;
 }
 
-/* === FOOTER === */
-.sh-footer-section {
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    margin-top: 30px;
-    text-align: center;
-    box-shadow: 3px 3px 3px 5px rgb(0, 0, 0, 0.1);
-}
 
 /* ==================== */
 .sh-mobile-navbar {

@@ -73,7 +73,7 @@ const AppointmentDetails = () => {
                             <li onclick="hidemenu()" class="sh-menu-hover"><FontAwesomeIcon icon={faBarsStaggered}/></li>
                             <li onclick="showSidemenu()" class="show-short-menu"><FontAwesomeIcon icon={faArrowRight}/>
                             </li>
-                            <li class="appointment-btn"><a href="patient-info.html">সাক্ষাৎকার</a></li>
+                            <li class="appointment-btn"><NavLink to="/patient-info">সাক্ষাৎকার</NavLink></li>
                         </ul>
                     </div>
                     <div class="sh-doctor-nav-right-container">
@@ -249,10 +249,7 @@ const AppointmentDetails = () => {
                 <p>০১</p>
                 <button class="sh-pagination-next" type="button" name="button">পরবর্তী</button>
             </div>
-            {/* <!-- ==== FOOTER ==== --> */}
-            <div class="sh-footer-section">
-                <p>Design by subas hebrom (Abir)</p>
-            </div>
+                
         </div>
     </div>
         </div>

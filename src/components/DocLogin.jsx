@@ -9,7 +9,9 @@ const Login = () => {
         document.querySelector(".sh-patients-log-in-container").style.display = 'none';
         document.querySelector(".sh-patients-sign-up-container").style.display = 'block';
     }
+    
     return (
+        
         <div>
             <div class="sh-doctor-sign-up-container">
         <div class="sh-account-text">

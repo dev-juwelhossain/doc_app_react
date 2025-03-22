@@ -39,7 +39,7 @@ const Home = () => {
                 <ul>
                     <li><NavLink to='/'><FontAwesomeIcon icon={faHome}/></NavLink></li>
                     <li><NavLink to="/patient-info"><FontAwesomeIcon icon={faHospitalUser}/></NavLink></li>
-                    <li><NavLink href="appointment-details.html"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
+                    <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical}/></NavLink></li>
                     <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock}/></NavLink></li>
                     <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor}/></NavLink></li>
                     <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch}/></NavLink></li>
@@ -83,7 +83,7 @@ const Home = () => {
                             <li onclick="hidemenu()" class="sh-menu-hover"><FontAwesomeIcon icon={faBarsStaggered}/></li>
                             <li onclick="showSidemenu()" class="show-short-menu"><FontAwesomeIcon icon={faArrowRight}/>
                             </li>
-                            <li class="appointment-btn"><NavLink to="/change-doctor">সাক্ষাৎকার</NavLink></li>
+                            <li class="appointment-btn"><NavLink to="/patient-info">সাক্ষাৎকার</NavLink></li>
                         </ul>
                     </div>
                     <div class="sh-doctor-nav-right-container">

@@ -378,7 +378,7 @@ a {
 }
 
 /* === SUBMIT BUTTON === */
-.sh-submit-btn {
+.sh-submit-btn-pt {
     width: 70%;
     padding: 20px;
     display: flex;
@@ -386,7 +386,7 @@ a {
     justify-content: end;
 }
 
-.sh-submit-btn button {
+.sh-submit-btn-pt button {
     transition: all 0.3s ease-in-out;
     font-size: 1.25rem;
     font-weight: 600;
@@ -397,18 +397,10 @@ a {
     border-radius: 5px;
 }
 
-.sh-submit-btn button:hover {
+.sh-submit-btn-pt button:hover {
     background: var(--btn-hover);
 }
 
-.sh-footer-section {
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    margin-top: 40px;
-    text-align: center;
-    box-shadow: 3px 3px 3px 5px rgb(0, 0, 0, 0.1);
-}
 
 /* === PDF FILE === */
 .sh-pdf-section {

@@ -309,7 +309,7 @@ a {
 /* === PATIENTS SECTION === */
 .sh-patients-section {
     width: 100%;
-    height: 60vh;
+    height: max-content;
     padding: 20px;
 }
 
@@ -330,7 +330,6 @@ td {
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
     margin-bottom: 10px;
     margin-top: 20px;
     justify-content: space-between;
@@ -339,16 +338,9 @@ td {
 .sh-new-patients h1 {
     font-size: 1.5rem;
     color: #708090;
+    border-bottom: 1px solid #708090;
 }
 
-.sh-new-patients h1::before {
-    content: "";
-    bottom: 0;
-    height: 2px;
-    width: 150px;
-    position: absolute;
-    background-color: #2F4F4F;
-}
 
 .sh-new-patients input {
     width: 25%;
@@ -584,7 +576,7 @@ td {
 
     .sh-mobile-navbar a {
         height: 100%;
-        padding: 0px 20px;
+        padding: 0px 21px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -71,7 +71,7 @@ const PatientInfo = () => {
                             <li onclick="hidemenu()" class="sh-menu-hover"><FontAwesomeIcon icon={faBarsStaggered}/></li>
                             <li onclick="showSidemenu()" class="show-short-menu"><FontAwesomeIcon icon={faArrowRight}/>
                             </li>
-                            <li class="appointment-btn"><a href="patient-info.html">সাক্ষাৎকার</a></li>
+                            <li class="appointment-btn"><NavLink to="/patient-info">সাক্ষাৎকার</NavLink></li>
                         </ul>
                     </div>
                     <div class="sh-doctor-nav-right-container">
@@ -222,7 +222,7 @@ const PatientInfo = () => {
                 </div>
             </div>
             {/* <!-- === SUBMIT BUTTON === --> */}
-            <div class="sh-submit-btn"><button type="submit" name="submit">জমা করুন </button></div>
+            <div class="sh-submit-btn-pt"><button type="submit" name="submit">জমা করুন </button></div>
           {/*   <!-- === PDF FILE ===  --> */}
             <div class="sh-pdf-section">
                 <div class="sh-pdf-details">
@@ -291,10 +291,7 @@ const PatientInfo = () => {
                    <FontAwesomeIcon icon={faFilePdf} className='download'/>
                 </div>
             </div>
-           {/*  <!-- ==== FOOTER ==== --> */}
-            <div class="sh-footer-section">
-                <p>Design by subas hebrom (Abir)</p>
-            </div>
+          
         </div>
     </div>
 
