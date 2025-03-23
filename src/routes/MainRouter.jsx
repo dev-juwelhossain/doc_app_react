@@ -6,43 +6,59 @@ import ChangeDoctor from "../pages/ChangeDoctor";
 import DocTimeManage from "../pages/DocTimeManage";
 import DoctorProfile from "../pages/DoctorProfile";
 import PatientInfo from "../pages/PatientInfo";
-import Login from "../components/DocLogin";
+
+import SignUp from "../auth/SignUp";
+import LogIn from "../auth/LogIn";
+import DocSignUp from "../auth/DocSignUp";
+import DocLogin from "../auth/DocLogin";
 
 
 const MainRouter = createBrowserRouter([{
-        path:'/',
-        element: <MainLayout/>
-        ,
-        children:   [
-            {
-                path: '/',
-                element: <Home/>
-            },
-            {
-                path:'/appointment-details',
-                element:<AppointmentDetails/>
-            },
-            {
-                path:'/change-doctor',
-                element:<ChangeDoctor/>
-            },
-            {
-                path:'/doctor-time-manage',
-                element:<DocTimeManage/>
-            },
-            {
-                path:'/doctor-profile',
-                element:<DoctorProfile/>
-            },
-            {
-                path:'/patient-info',
-                element:<PatientInfo/>
-            },
-        ]
-    },
-    {
-        path:'/login',
-        element:<Login/>
-    }
+    path: '/',
+    element: <MainLayout />
+    ,
+    children: [
+        {
+            path: '/',
+            element: <Home />
+        },
+        {
+            path: '/appointment-details',
+            element: <AppointmentDetails />
+        },
+        {
+            path: '/change-doctor',
+            element: <ChangeDoctor />
+        },
+        {
+            path: '/doctor-time-manage',
+            element: <DocTimeManage />
+        },
+        {
+            path: '/doctor-profile',
+            element: <DoctorProfile />
+        },
+        {
+            path: '/patient-info',
+            element: <PatientInfo />
+        },
+    ]
+},
+{
+    path: '/login',
+    element: <LogIn />
+},
+{
+    path: '/signup',
+    element: <SignUp />
+},
+{
+    path: '/doc-signup',
+    element: <DocSignUp />
+},
+{
+    path: '/doc-login',
+    element: <DocLogin />
+}
 ]);
 export default MainRouter;

@@ -1,4 +1,4 @@
-import { faArrowRight, faBangladeshiTakaSign, faBarsStaggered, faBell, faCheck, faChevronLeft, faChevronRight, faClock, faCross, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faTrash, faUserDoctor, faUsers, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBangladeshiTakaSign, faBarsStaggered, faBell, faCheck, faChevronLeft, faChevronRight, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faTrash, faUserDoctor, faUsers, faXmark } from '@fortawesome/free-solid-svg-icons'
 import '../css/home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink, Link } from 'react-router-dom'

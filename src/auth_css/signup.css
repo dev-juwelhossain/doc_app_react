@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+:root {
+    --bg-color: #f1f9ff;
+    --btn-bg-color: #095d7e;
+    --btn-hover: #0065c0;
+    --secondary-size: 1.20rem;
+    /* 20px */
+    --primary-size: 1rem;
+    /* 16px */
+}
+
+.signup-header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sh-patients-sign-up-container{
+    display: block;
+    width: 50%;
+    padding: 20px;
+    line-height: 3em;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid #7080907a;
+}
+.sh-account-text{
+    display: flex;
+    padding: 5px;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    background: #008080;
+    justify-content: center;
+}
+.sh-sign-up-box{
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sh-sign-up-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sh-sign-up-details input{
+    width: 100%;
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: 1px solid #7080907a;
+    font-size: var(--primary-size);
+}
+.sh-sign-up-details label{
+    font-size: var(--secondary-size);
+}
+.sh-sign-up-details select{
+    width: 100%;
+    appearance: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: 1px solid #7080907a;
+    font-size: var(--primary-size);
+}
+.sh-sign-up-details select, input:focus{
+    outline: none;
+}
+/* === SIGN UP BUTTON === */
+.sh-sign-up-btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sh-sign-up-btn button{
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 30px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    background: #66BB6A;
+    border: 1px solid #7080907a;
+    font-size: var(--secondary-size);
+}
+.sh-sign-up-btn button:hover{
+    background: #589d5b;
+}
+.sh-allready-account{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sh-allready-account button{
+    border: none;
+    background: #23c1e7;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--primary-size);
+}
+.sh-allready-account button a{
+    color: white;
+}
+@media(max-width: 768px){
+    .signup-header{
+    width: 100%;
+    padding: 10px;
+    }
+    .sh-patients-sign-up-container{
+        width: 100%;
+    }
+    .sh-patients-sign-up-container label{
+        font-size: 1rem;
+    }
+}
