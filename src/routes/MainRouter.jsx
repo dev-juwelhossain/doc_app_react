@@ -11,6 +11,7 @@ import SignUp from "../auth/SignUp";
 import LogIn from "../auth/LogIn";
 import DocSignUp from "../auth/DocSignUp";
 import DocLogin from "../auth/DocLogin";
+import UserChangeDoctor from "../pages/UserChangeDoctor";
 
 
 const MainRouter = createBrowserRouter([{
@@ -42,6 +43,11 @@ const MainRouter = createBrowserRouter([{
             path: '/patient-info',
             element: <PatientInfo />
         },
+        {
+            path: '/user-change-doctor',
+            element: <UserChangeDoctor />
+        },
+
     ]
 },
 {

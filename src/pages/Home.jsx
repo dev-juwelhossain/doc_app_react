@@ -259,7 +259,7 @@ const Home = () => {
                         <button class="sh-pagination-previous" type="button" name="button">
                             <span>পূর্ববর্তী</span><i><FontAwesomeIcon icon={faChevronLeft} /></i>
                         </button>
-                        <p>০১</p>
+                        <p className='page-number'>০১</p>
                         <p>০২</p>
                         <p>০৩</p>
                         <button class="sh-pagination-previous" type="button" name="button">
@@ -268,7 +268,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

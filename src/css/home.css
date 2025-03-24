@@ -469,11 +469,15 @@ td {
 }
 
 .sh-pagination p {
+    padding: 7px;
     font-size: 1rem;
     font-weight: bolder;
     border: 1px solid #708090;
-    border-radius: 25px;
-    padding: 2px 5px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
 }
 .sh-pagination p:hover{
     background: var(--btn-hover);
@@ -578,11 +582,12 @@ td {
         align-items: center;
         justify-content: center;
     }
-    
-    .sh-pagination i{
+
+    .sh-pagination i {
         display: block;
     }
-    .sh-pagination span{
+
+    .sh-pagination span {
         display: none;
     }
 
