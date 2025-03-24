@@ -1,65 +1,63 @@
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, NavLink } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faBarsStaggered, faBell, faClock, faHospitalUser, faHouseMedical, faSearch, } from '@fortawesome/free-solid-svg-icons';
 const UserChangeDoctor = () => {
     return (
         <div>
             <div class="sh-mobile-navbar">
                 <ul>
-                    <li><NavLink to="/"><FontAwesomeIcon icon={faClock} /></NavLink></li>
-                    <li><a href="user-patient-info.html"><i class="fa-sharp-doutone fa-solid fa-hospital-user"></i></a></li>
+                    <li><NavLink to="/user-change-doctor" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                    <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
+                    <li><NavLink to="/user-time-manage"><FontAwesomeIcon icon={faClock} /></NavLink></li>
                 </ul>
             </div>
-            {/* <!-- ==== LEFT AND TOP ITEMS ==== --> */}
+            {/*    <!-- ==== LEFT AND TOP ITEMS ==== --> */}
             <div class="sh-left-and-top-items-section">
-                {/* <!-- === LEFT SIDE MENU ITEMS ICONS === --> */}
+                {/*    <!-- === LEFT SIDE MENU ITEMS ICONS === --> */}
                 <div class="sh-left-side-menu-container-icon">
                     <div class="sh-brand-logo-icons">
-                        <a href="user-change-doctor.html"><i class="fa-solid fa-house-medical"></i></a>
+                        <NavLink to="/"><FontAwesomeIcon icon={faHouseMedical} /></NavLink>
                     </div>
 
                     <div class="sh-left-side-menu-items-icons">
                         <ul>
-                            <li><a href="user-change-doctor.html"><i class="fa-solid fa-search"></i></a></li>
-                            <li><a href="user-doctor-time-manage.html"><i class="fa-solid fa-clock"></i></a></li>
-                            <li><a href="user-patient-info.html"><i class="fa-sharp-doutone fa-solid fa-hospital-user"></i></a>
-                            </li>
+                            <li><NavLink to="/user-change-doctor" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                            <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
+                            <li><NavLink to="/user-time-manage"><FontAwesomeIcon icon={faClock} /></NavLink></li>
                         </ul>
                     </div>
                 </div>
-                {/* <!-- ================================ --> */}
-                <div class="sh-left-side-menu-container sh-side-menu-only-icons">
+                {/*  <!-- ================================ --> */}
+                <div class="sh-left-side-menu-container sh-close">
                     <div class="sh-brand-logo">
-                        <a href="user-change-doctor.html"><i class="fa-solid fa-house-medical">HOUSE MEDICAL
-                        </i></a>
+                        <Link to="/"><FontAwesomeIcon icon={faHouseMedical} /> HOUSE MEDICAL</Link>
                     </div>
 
                     <div class="sh-left-side-menu-items">
                         <ul>
-                            <li><a href="user-change-doctor.html"><i class="fa-solid fa-search"></i>ডাক্তার পরিবর্তন</a></li>
-                            <li><a href="user-doctor-time-manage.html"><i class="fa-solid fa-user-doctor"></i>ডাক্তারের
-                                সময়সূচী</a></li>
-                            <li><a href="user-patient-info.html"><i class="fa-sharp-doutone fa-solid fa-hospital-user"></i>রোগীর
-                                তথ্য</a>
-                            </li>
+
+                            <li><NavLink to="/user-change-doctor" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faSearch} />ডাক্তার পরিবর্তন</NavLink></li>
+                            <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} />রোগীর তথ্য </NavLink></li>
+                            <li><NavLink to="/user-time-manage"><FontAwesomeIcon icon={faClock} />ডাক্তারের সময়সূচী </NavLink></li>
                         </ul>
                     </div>
                 </div>
                 {/*  <!-- === RIGHT ITEM DETAILS SECTION === --> */}
                 <div class="sh-right-item-details-section">
-                    {/*  <!-- === TOP NAV ITEMS === --> */}
+                    {/*   <!-- === TOP NAV ITEMS === --> */}
                     <div class="sh-doctor-nav-section">
                         <div class="sh-doctor-nav-left-container">
                             <ul>
-                                <li onclick="hidemenu()" class="sh-menu-hover"><i class="fa-solid fa-bars-staggered"></i></li>
-                                <li onclick="showSidemenu()" class="show-short-menu"><i class="fa-solid fa-arrow-right"></i>
+                                <li onclick="hidemenu()" class="sh-menu-hover"><FontAwesomeIcon icon={faBarsStaggered} /></li>
+                                <li onclick="showSidemenu()" class="show-short-menu"><FontAwesomeIcon icon={faArrowRight} />
                                 </li>
-                                <li class="appointment-btn"><a href="user-patient-info.html">সাক্ষাৎকার</a></li>
+                                <li class="appointment-btn"><NavLink to="/patient-info">সাক্ষাৎকার</NavLink></li>
                             </ul>
                         </div>
                         <div class="sh-doctor-nav-right-container">
-                            {/*   <!-- === NOTIFICATION ICON === --> */}
-                            <div class="sh-notificatio-icon"><i class="fa-solid fa-bell"></i></div>
+
+                            <div class="sh-notificatio-icon"><FontAwesomeIcon icon={faBell} /></div>
                             <div class="sh-doctor-profile">
                                 <div class="sh-doctor-name">
                                     <h4>Dr.Abir Hossain</h4>
@@ -71,15 +69,15 @@ const UserChangeDoctor = () => {
                             </div>
                         </div>
                     </div>
-                    {/*    <!-- ==== PATIENT INFO AND PAYMENT METHODS ==== --> */}
+                    {/* <!-- ==== PATIENT INFO AND PAYMENT METHODS ==== --> */}
                     <div class="sh-patient-info-payment-methods-section">
-                        {/*  <!-- === PATIENTS INFORMATION === --> */}
+                        {/* <!-- === PATIENTS INFORMATION === --> */}
                         <div class="sh-patient-information-section">
                             <div class="patient-info-text">
                                 <h2>ডাক্তার পরিবর্তনের তথ্য দিন </h2>
                             </div>
                             <div class="sh-patient-information-container">
-                                {/*   <!-- ==== DIVISION ==== --> */}
+                                {/*  <!-- ==== DIVISION ==== --> */}
                                 <div class="sh-info-box">
                                     <label for="text">বিভাগ</label>
                                     <select name="" id="">
@@ -94,7 +92,7 @@ const UserChangeDoctor = () => {
                                         <option value="7" name="country">বরিশাল</option>
                                     </select>
                                 </div>
-                                {/* <!-- ==== DISTRICT ==== --> */}
+                                {/*  <!-- ==== DISTRICT ==== --> */}
                                 <div class="sh-info-box">
                                     <label for="text">জেলা</label>
                                     <select name="" id="">
@@ -165,11 +163,11 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">বরগুনা </option>
                                     </select>
                                 </div>
-                                {/* <!-- ==== HOSPITAL ==== --> */}
+                                {/*  <!-- ==== HOSPITAL ==== --> */}
                                 <div class="sh-info-box">
                                     <label for="text">হাসপাতালের নাম</label>
                                     <select name="" id="">
-                                        {/*  <!-- === Name of the hospital in Rangpur district of Rangpur division === --> */}
+                                        {/*   <!-- === Name of the hospital in Rangpur district of Rangpur division === --> */}
                                         <option value="country" name="country">এখানে হাসপাতালের নাম লিখুন</option>
                                         <option value="1" name="country">রংপুর মেডিকেল কলেজ ও হাসপাতাল</option>
                                         <option value="2" name="country">গুড হেলথ হাসপাতাল</option>
@@ -259,7 +257,7 @@ const UserChangeDoctor = () => {
                                         </option>
                                         <option value="64" name="country">ডিজিটাল এক্স-রে সেন্টার, সদর হাসপাতাল ১ম গাইবান্ধা।
                                         </option>
-                                        {/*   <!-- === Name of the hospital in kurigram district of rangpur division --> */}
+                                        {/*  <!-- === Name of the hospital in kurigram district of rangpur division --> */}
                                         <option value="64" name="country">কুড়িগ্রাম জেনারেল হাসপাতাল</option>
                                         <option value="64" name="country">গ্রীন লাইফ জেনারেল হাসপাতাল</option>
                                         <option value="64" name="country">পপুলার জেনারেল (পিজি) হাসপাতাল</option>
@@ -280,7 +278,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">জনতা ক্লিনিক ও ডায়াগনস্টিক সেন্টার, নীলফামারী
                                         </option>
                                         <option value="64" name="country">নীলফামারী শিশু হাসপাতাল</option>
-                                        {/*   <!-- === Name of the hospital in lalmonirhat district of rangpur division === --> */}
+                                        {/* <!-- === Name of the hospital in lalmonirhat district of rangpur division === --> */}
                                         <option value="64" name="country">লালমনিরহাট সদর হাসপাতাল</option>
                                         {/* <!-- === Name of the hospital in dinajpur district of rangpur division === --> */}
                                         <option value="64" name="country">দিনাজপুর জেনারেল হাসপাতাল</option>
@@ -362,7 +360,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">দেশ ক্লিনিক ও ডায়াগনস্টিক</option>
                                         <option value="64" name="country">সুজলী হাসপাতাল</option>
                                         <option value="64" name="country">সূর্য হাসপাতাল ও ডায়াগনস্টিক সেন্টার</option>
-                                        {/*   <!-- === Name of the hospital in nator district of rajshahi division === --> */}
+                                        {/* <!-- === Name of the hospital in nator district of rajshahi division === --> */}
                                         <option value="64" name="country">২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর</option>
                                         <option value="64" name="country">নাটোর জেনারেল হাসপাতাল</option>
                                         <option value="64" name="country">নাটোরে ট্রমা সেন্টার & হসপিটাল</option>
@@ -445,7 +443,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">শহীদ এম মনসুর আলী মেডিকেল কলেজ, সিরাজগঞ্জ</option>
                                         <option value="64" name="country">সিরাজগঞ্জ কেন্দ্রীয় হাসপাতাল কমপ্লেক্স</option>
                                         <option value="64" name="country">দি পপুলার দিয়াগোনিস্টিক সেন্টারে</option>
-                                        {/*  <!-- === Name of hospital in pabna district of rajshahi division === --> */}
+                                        {/* <!-- === Name of hospital in pabna district of rajshahi division === --> */}
                                         <option value="64" name="country">পাবনা কেন্দ্রীয় হাসপাতাল</option>
                                         <option value="64" name="country">প্যাসিফিক ডায়াগনস্টিক সেন্টার এবং বিশেষায়িত হাসপাতাল
                                         </option>
@@ -496,7 +494,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">অ্যাপোলো হাসপাতাল তথ্য কেন্দ্র, অ্যাপোলো হাব রাজশাহী
                                         </option>
                                         <option value="64" name="country">জেনারেল ডায়াগনস্টিক সেন্টার, চাঁপাইনবাবগঞ্জ</option>
-                                        {/*   <!-- === Name of hospital in Naogaon district of rajshahi division === --> */}
+                                        {/* <!-- === Name of hospital in Naogaon district of rajshahi division === --> */}
                                         <option value="64" name="country">প্রসূতি হাসপাতাল নওগাঁ</option>
                                         <option value="64" name="country">নওগাঁ মেডিকেল কলেজ ও হাসপাতাল</option>
                                         <option value="64" name="country">দি পপুলার হাসপাতাল নওগাঁ</option>
@@ -525,7 +523,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">মিরপুর কমিউনিটি ক্লিনিক</option>
                                         <option value="64" name="country">বাংলাদেশ বেটার কেয়ার হাসপাতাল ও ল্যাব</option>
                                         <option value="64" name="country">সিটি হাসপাতাল ও ডায়াগনস্টিক</option>
-                                        {/*  <!-- === Name of hospital in joypurhat district of rajshahi division === --> */}
+                                        {/* <!-- === Name of hospital in joypurhat district of rajshahi division === --> */}
                                         <option value="64" name="country">জেলা হাসপাতাল, জয়পুরহাট।</option>
                                         <option value="64" name="country">ফ্যামিলি কেয়ার ল্যাব ও হাসপাতাল</option>
                                         <option value="64" name="country">জয়পুরহাট আধুনিক হাসপাতাল</option>
@@ -540,8 +538,8 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">গ্রাজুয়েট জেনারেল হাসপাতাল </option>
                                         <option value="64" name="country">আধুনিক জেনারেল হাসপাতাল ও ডায়াগনস্টিক সেন্টার
                                         </option>
-                                        {/*  <!-- ============================================================================== -->
-
+                                        {/* <!-- ============================================================================== -->
+        
                                         <!-- === Name of hospital in sylhet district of sylhet division === --> */}
                                         <option value="64" name="country">ইকরা প্রতিবন্ধী শিশু হাসপাতাল</option>
                                         <option value="64" name="country">রহমান হাসপাতাল ও ডায়াগনস্টিক সেন্টার</option>
@@ -569,7 +567,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">টিবি হাসপাতাল</option>
                                         <option value="64" name="country">আল-ফালাহ হাসপাতাল</option>
                                         <option value="64" name="country">ভার্ড চক্ষু হাসপাতাল, জটারপুর, সিলেট</option>
-                                        {/*   <!-- ================================================================== -->
+                                        {/* <!-- ================================================================== -->
                                         <!-- === Name of hospital in sunamganj of sylhet division === --> */}
                                         <option value="64" name="country">বিশ্বম্ভর পুর হাসপাতাল</option>
                                         <option value="64" name="country">আবুল খায়ের হাসপাতাল, ঝিগলী</option>
@@ -592,7 +590,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">চক্ষু চিকিৎসা হাসপাতাল সুনামগঞ্জ</option>
                                         <option value="64" name="country">সুনামগঞ্জ মেডিকেল কলেজ</option>
                                         <option value="64" name="country">সুনামগঞ্জ সদর হাসপাতাল</option>
-                                        {/* <!-- ====================================================== -->
+                                        {/*  <!-- ====================================================== -->
                                         <!-- === Name of hospital in moulvibazar district of sylhet === --> */}
                                         <option value="64" name="country">শাহ জালাল প্রাইভেট হাসপাতাল ও ডায়াগনস্টিক সেন্টার
                                         </option>
@@ -626,7 +624,7 @@ const UserChangeDoctor = () => {
                                         <option value="64" name="country">হবিগঞ্জ হেলথ কেয়ার হাসপাতাল</option>
                                         <option value="64" name="country">চান্দের হাসি হাসপাতাল লিমিটেড।</option>
                                         <option value="64" name="country">২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, হবিগঞ্জ</option>
-                                        {/*  <!-- ========================================================================== --> */}
+                                        {/* <!-- ========================================================================== --> */}
                                     </select>
                                 </div>
                             </div>
@@ -652,7 +650,7 @@ const UserChangeDoctor = () => {
                                         <option value="1" name="department">রেডিওথেরাপি</option>
                                     </select>
                                 </div>
-                                {/*  <!-- ==== DOCTORS NAME ==== --> */}
+                                {/* <!-- ==== DOCTORS NAME ==== --> */}
                                 <div class="sh-info-box">
                                     <label for="text">ডাক্তারের নাম </label>
                                     <input type="text" placeholder="এখানে ডাক্তারের নাম লিখুন" />
@@ -667,7 +665,7 @@ const UserChangeDoctor = () => {
                                 name="button">খুঁজুন</button></div>
                         </div>
                     </div>
-                    {/*  <!-- === SUBMIT BUTTON === --> */}
+                    {/* <!-- === SUBMIT BUTTON === --> */}
                     <div class="sh-submit-btn"><button type="submit" name="submit">সংরক্ষণ করুন</button></div>
                     {/* <!-- === DOCTOR PROFILE SHOWING === --> */}
                     <div class="sh-show-doctor-profile-section">
@@ -687,8 +685,7 @@ const UserChangeDoctor = () => {
                     </div>
                 </div>
             </div>
-
-        </div >
+        </div>
     );
 };
 

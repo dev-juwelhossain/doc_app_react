@@ -276,6 +276,9 @@ a {
     width: 100%;
     line-height: 2em;
 }
+.sh-info-box label{
+    font-size: 1.15rem;
+}
 
 .sh-patient-information-container input {
     width: 100%;
@@ -584,5 +587,8 @@ a {
     .sh-pdf-download {
         width: 100%;
         padding: 10px;
+    }
+    .sh-info-box label{
+        font-size: 1.05rem;
     }
 }

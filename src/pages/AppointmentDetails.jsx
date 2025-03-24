@@ -1,4 +1,4 @@
-import { faArrowRight, faBarsStaggered, faBell, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faUserDoctor, } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBarsStaggered, faBell, faChevronLeft, faChevronRight, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faUserDoctor, } from '@fortawesome/free-solid-svg-icons'
 import '../css/appointment-details.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink, Link } from 'react-router-dom'
@@ -162,9 +162,9 @@ const AppointmentDetails = () => {
                     </div>
                     {/*  <!-- === PAGINATION === --> */}
                     <div class="sh-pagination">
-                        <button class="sh-pagination-previous" type="button" name="button">পূর্ববর্তী</button>
+                        <button class="sh-pagination-previous" type="button" name="button"><span>পূর্ববর্তী</span><i><FontAwesomeIcon icon={faChevronLeft} /> </i></button>
                         <p>০১</p>
-                        <button class="sh-pagination-next" type="button" name="button">পরবর্তী</button>
+                        <button class="sh-pagination-next" type="button" name="button"><span>পূর্ববর্তী</span><i><FontAwesomeIcon icon={faChevronRight} /> </i></button>
                     </div>
 
                 </div>

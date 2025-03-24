@@ -286,17 +286,27 @@ a {
     gap: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+.sh-patient-information-container-time-table {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .sh-this-container-for-mobile {
-   width: 100%;
-   display: flex;
+    width: 30%;
+    display: flex;
+    align-items: center;
 }
 
 .sh-info-box {
     width: 50%;
     line-height: 2em;
+}
+.sh-info-day{
+   padding-right: 5px;
 }
 
 .sh-info-add {
@@ -305,7 +315,7 @@ a {
 }
 
 .sh-info-add label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .sh-info-box-day {
@@ -313,9 +323,11 @@ a {
     width: 50%;
     font-size: 1.5rem;
 }
-
+.sh-info-box-day label{
+    font-size: 1.25rem;
+}
 .sh-info-box label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .sh-patient-information-container input {
@@ -420,5 +432,11 @@ a {
         display: flex;
         align-items: center;
         color: var(--btn-bg-color);
+    }
+    .sh-this-container-for-mobile{
+        width: 100%;
+    }
+    .sh-patient-information-container-time-table{
+        display: none;
     }
 }

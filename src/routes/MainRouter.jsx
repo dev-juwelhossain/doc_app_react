@@ -12,6 +12,8 @@ import LogIn from "../auth/LogIn";
 import DocSignUp from "../auth/DocSignUp";
 import DocLogin from "../auth/DocLogin";
 import UserChangeDoctor from "../pages/UserChangeDoctor";
+import UserPatientInfo from "../pages/UserPatientInfo";
+import UserTimeManage from "../pages/UserTimeManage";
 
 
 const MainRouter = createBrowserRouter([{
@@ -46,6 +48,14 @@ const MainRouter = createBrowserRouter([{
         {
             path: '/user-change-doctor',
             element: <UserChangeDoctor />
+        },
+        {
+            path: '/user-patient-info',
+            element: <UserPatientInfo />
+        },
+        {
+            path: '/user-time-manage',
+            element: <UserTimeManage />
         },
 
     ]

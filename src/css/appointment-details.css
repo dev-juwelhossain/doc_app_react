@@ -434,7 +434,7 @@ td {
         align-items: center;
         justify-content: center;
     }
-    .sh-pagination i{
+    .sh-pagination a{
         display: block;
     }
     .sh-pagination span{

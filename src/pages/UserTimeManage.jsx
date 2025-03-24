@@ -1,18 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
 import '../css/doctor-time-manage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faBarsStaggered, faBell, faClock, faHome, faHospitalUser, faHouseMedical, faNotesMedical, faSearch, faUserDoctor, } from '@fortawesome/free-solid-svg-icons';
-const DocTimeManage = () => {
+import { faArrowRight, faBarsStaggered, faBell, faClock, faHospitalUser, faHouseMedical, faSearch, } from '@fortawesome/free-solid-svg-icons';
+const UserTimeManage = () => {
     return (
         <div>
             <div class="sh-mobile-navbar">
                 <ul>
-                    <li><NavLink to='/'><FontAwesomeIcon icon={faHome} /></NavLink></li>
-                    <li><NavLink to="/patient-info"> <FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
-                    <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical} /></NavLink></li>
-                    <li><NavLink to="/doctor-time-manage" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faClock} /></NavLink></li>
-                    <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor} /></NavLink></li>
-                    <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                    <ul>
+                        <li><NavLink to="/user-change-doctor"><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                        <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
+                        <li><NavLink to="/user-time-manage" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faClock} /></NavLink></li>
+
+                    </ul>
                 </ul>
             </div>
             {/*    <!-- ==== LEFT AND TOP ITEMS ==== --> */}
@@ -25,12 +25,9 @@ const DocTimeManage = () => {
 
                     <div class="sh-left-side-menu-items-icons">
                         <ul>
-                            <li><NavLink to='/'><FontAwesomeIcon icon={faHome} /></NavLink></li>
-                            <li><NavLink to="/patient-info"><FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
-                            <li><NavLink href="appointment-details.html"><FontAwesomeIcon icon={faNotesMedical} /></NavLink></li>
-                            <li><NavLink to="/doctor-time-manage"><FontAwesomeIcon icon={faClock} /></NavLink></li>
-                            <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor} /></NavLink></li>
-                            <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                            <li><NavLink to="/user-change-doctor"><FontAwesomeIcon icon={faSearch} /></NavLink></li>
+                            <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} /></NavLink></li>
+                            <li><NavLink to="/user-time-manage" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faClock} /></NavLink></li>
                         </ul>
                     </div>
                 </div>
@@ -42,23 +39,9 @@ const DocTimeManage = () => {
 
                     <div class="sh-left-side-menu-items">
                         <ul>
-                            <li>
-                                <NavLink to="/">
-                                    <FontAwesomeIcon icon={faHome} />
-                                    <p>হোম</p>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/patient-info' >
-                                    <FontAwesomeIcon icon={faHospitalUser} /> রোগীর
-                                    তথ্য</NavLink>
-                            </li>
-                            <li><NavLink to="/appointment-details"><FontAwesomeIcon icon={faNotesMedical} />
-                                অ্যাপয়েন্টমেন্টের
-                                বিবরণ</NavLink></li>
-                            <li><NavLink to="/doctor-time-manage" style={({ isActive }) => ({ color: isActive ? "white" : "#708090", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faClock} />ডাক্তারের সময়সূচী</NavLink></li>
-                            <li><NavLink to="/doctor-profile"><FontAwesomeIcon icon={faUserDoctor} />ডাক্তারের প্রোফাইল</NavLink></li>
-                            <li><NavLink to="/change-doctor"><FontAwesomeIcon icon={faSearch} />ডাক্তার পরিবর্তন</NavLink></li>
+                            <li><NavLink to="/user-change-doctor"><FontAwesomeIcon icon={faSearch} />ডাক্তার পরিবর্তন</NavLink></li>
+                            <li><NavLink to="/user-patient-info" > <FontAwesomeIcon icon={faHospitalUser} />রোগীর তথ্য</NavLink></li>
+                            <li><NavLink to="/user-time-manage" style={({ isActive }) => ({ color: isActive ? "white" : "black", backgroundColor: isActive ? "#0065c0" : "transparent", })}><FontAwesomeIcon icon={faClock} />ডাক্তারের সময়সূচী</NavLink></li>
                         </ul>
                     </div>
                 </div>
@@ -227,45 +210,6 @@ const DocTimeManage = () => {
                                         রোড, রংপুর।</p>
                                 </div>
                             </div>
-                            <div class="sh-patient-information-container">
-                                <div class="sh-this-container-for-mobile">
-                                    <div class="sh-info-box">
-                                        <p>১২/০৩/২০২৫</p>
-                                    </div>
-                                </div>
-                                <div class="sh-this-container-for-mobile">
-                                    <div class="sh-info-day">
-                                        <p>শুক্রবার, </p>
-                                    </div>
-                                    <div class="sh-info-box">
-                                        <p>বিকাল ০৩:০০ টা</p>
-                                    </div>
-                                </div>
-                                <div class="sh-info-add">
-                                    <p>রংপুর কমিউনিটি মেডিকেল কলেজ ও হাসপাতাল, চতুর্থ তলা, ৪০৪ কক্ষ। ৭৭/১, রোড নং-১, ধাপ, জেল
-                                        রোড, রংপুর।</p>
-                                </div>
-                            </div>
-
-                            <div class="sh-patient-information-container">
-                                <div class="sh-this-container-for-mobile">
-                                    <div class="sh-info-box">
-                                        <p>১২/০৩/২০২৫</p>
-                                    </div>
-                                </div>
-                                <div class="sh-this-container-for-mobile">
-                                    <div class="sh-info-day">
-                                        <p>শুক্রবার, </p>
-                                    </div>
-                                    <div class="sh-info-box">
-                                        <p>বিকাল ০৩:০০ টা</p>
-                                    </div>
-                                </div>
-                                <div class="sh-info-add">
-                                    <p>রংপুর কমিউনিটি মেডিকেল কলেজ ও হাসপাতাল, চতুর্থ তলা, ৪০৪ কক্ষ। ৭৭/১, রোড নং-১, ধাপ, জেল
-                                        রোড, রংপুর।</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -274,4 +218,4 @@ const DocTimeManage = () => {
     );
 };
 
-export default DocTimeManage;
+export default UserTimeManage;
